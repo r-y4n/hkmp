@@ -17,10 +17,10 @@ export default function Home() {
 
       @keyframes spin {
         from {
-          transform: rotate(91deg);
+          transform: rotate(89deg);
         }
         to {
-          transform: rotate(269deg);
+          transform: rotate(271deg);
         }
       }
     `;
