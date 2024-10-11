@@ -16,7 +16,7 @@ export default function Home() {
         margin: auto; 
         transform-origin: center; 
         z-index: 1000;
-        border-radius: 25%;
+        border-radius: 15%;
       }
 
       @keyframes spin {
