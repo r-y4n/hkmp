@@ -24,6 +24,7 @@ export default function Home() {
       align-items: center;
       z-index: 100;
       background-color: #f27596;
+      margin-bottom: 10vw;
       }
 
       @keyframes spin {
@@ -65,7 +66,7 @@ export default function Home() {
     image.className = 'imgstyle'; 
 
     container.appendChild(image);
-    image.appendChild(caption);
+    container.appendChild(caption);
     document.body.appendChild(container);
 
     return () => {
