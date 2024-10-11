@@ -20,13 +20,13 @@ export default function Home() {
 
       @keyframes spin {
         0% {
-          transform: rotate(30deg); 
-        }
-        50% {
           transform: rotate(330deg); 
         }
+        50% {
+          transform: rotate(0deg); 
+        }
         100% {
-          transform: rotate(30deg);
+          transform: rotate(330deg);
         }
       }
 
