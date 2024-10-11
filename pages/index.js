@@ -23,8 +23,8 @@ export default function Home() {
       padding-top: 10px;
       align-items: center;
       z-index: 100;
-      background-color: #f27596;
       margin-bottom: 10vw;
+      font-size: 26px;
       }
 
       @keyframes spin {
