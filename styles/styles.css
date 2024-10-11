@@ -1,4 +1,6 @@
 /* styles.css */
+
+/* Ensure full height of body and HTML for centering */
 body, html {
   margin: 0;
   padding: 0;
@@ -8,18 +10,14 @@ body, html {
   align-items: center;
 }
 
-.image-container {
+/* Style the image and apply the spinning animation */
+img {
   width: 300px;
   height: 300px;
+  animation: spin 2s infinite linear;
 }
 
-img {
-  width: 100%;
-  height: 100%;
-  /* Smooth the animation */
-  transition: transform 0.1s ease-in-out;
-}
-
+/* Define the keyframes for the spinning animation */
 @keyframes spin {
   100% {
     transform: rotate(360deg);
