@@ -11,8 +11,7 @@ export default function Home() {
         animation-name: spin;
         animation-duration: 2000ms; 
         animation-iteration-count: infinite;
-        animation-timing-function: linear;
-        animation-direction: alternate; 
+        animation-timing-function: ease-in-out;
         display: block; 
         margin: auto; 
         transform-origin: center; 
@@ -20,13 +19,13 @@ export default function Home() {
 
       @keyframes spin {
         0% {
-          transform: rotate(30deg); 
+          transform: rotate(-22.5deg); 
         }
         50% {
-          transform: rotate(0deg); 
+          transform: rotate(22.5deg); 
         }
         100% {
-          transform: rotate(330deg);
+          transform: rotate(-22.5deg);
         }
       }
 
@@ -47,7 +46,7 @@ export default function Home() {
     container.style.alignItems = 'center';
     container.style.height = '100vh';
 
- 
+    // Create the image element
     const image = document.createElement('img');
     image.src = '/will.jpg'; 
     image.className = 'imgstyle'; 
