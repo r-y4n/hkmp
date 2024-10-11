@@ -16,13 +16,17 @@ export default function Home() {
       }
 
       @keyframes spin {
-        from {
-          transform: rotate(89deg);
+        0% {
+          transform: rotate(30deg); /* Starting at 22.5 degrees */
         }
-        to {
-          transform: rotate(271deg);
+        50% {
+          transform: rotate(0deg); /* Ending at 67.5 degrees */
+        }
+        100% {
+          transform: rotate(330deg); /* Back to starting point */
         }
       }
+      
     `;
     document.head.appendChild(style);
 
