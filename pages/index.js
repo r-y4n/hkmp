@@ -9,7 +9,7 @@ export default function Home() {
         width: 70vw;
         height: 70vw;
         animation-name: spin;
-        animation-duration: 4000ms;
+        animation-duration: 1500ms;
         animation-iteration-count: infinite;
         animation-timing-function: linear;
       }
