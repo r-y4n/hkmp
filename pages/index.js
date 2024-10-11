@@ -6,8 +6,8 @@ export default function Home() {
     const style = document.createElement('style');
     style.innerHTML = `
       .imgstyle {
-        width: 60vw;
-        height: 60vw;
+        width: 80vw;
+        height: 80vw;
         animation-name: spin;
         animation-duration: 2000ms; 
         animation-iteration-count: infinite;
