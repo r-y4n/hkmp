@@ -16,6 +16,7 @@ export default function Home() {
         margin: auto; 
         transform-origin: center; 
         z-index: 1000;
+        border-radius: 25%;
       }
 
       @keyframes spin {
@@ -52,7 +53,7 @@ export default function Home() {
     image.className = 'imgstyle'; 
 
     container.appendChild(image);
-    
+
     document.body.appendChild(container);
 
     return () => {
