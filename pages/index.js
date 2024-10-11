@@ -24,7 +24,7 @@ export default function Home() {
       align-items: center;
       z-index: 100;
       margin-bottom: 10vw;
-      font-size: 26px;
+      font-size: 56px;
       }
 
       @keyframes spin {
