@@ -9,7 +9,7 @@ export default function Home() {
         width: 70vw;
         height: 70vw;
         animation-name: spin;
-        animation-duration: 7000ms;
+        animation-duration: 4000ms;
         animation-iteration-count: infinite;
         animation-timing-function: linear;
         animation-direction: alternate;
@@ -17,10 +17,10 @@ export default function Home() {
 
       @keyframes spin {
         from {
-          transform: rotate(220deg);
+          transform: rotate(22.5deg);
         }
         to {
-          transform: rotate(320deg);
+          transform: rotate(337.5deg);
         }
       }
     `;
