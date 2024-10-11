@@ -12,14 +12,15 @@ export default function Home() {
         animation-duration: 7000ms;
         animation-iteration-count: infinite;
         animation-timing-function: linear;
+        animation-direction: alternate;
       }
 
       @keyframes spin {
         from {
-          transform: rotate(30deg);
+          transform: rotate(220deg);
         }
         to {
-          transform: rotate(90deg);
+          transform: rotate(320deg);
         }
       }
     `;
