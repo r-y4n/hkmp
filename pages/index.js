@@ -12,7 +12,6 @@ export default function Home() {
         animation-duration: 4000ms;
         animation-iteration-count: infinite;
         animation-timing-function: linear;
-        animation-direction: alternate;
       }
 
       @keyframes spin {
