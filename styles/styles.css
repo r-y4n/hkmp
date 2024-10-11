@@ -12,8 +12,8 @@ body, html {
 
 /* Style the image and apply the spinning animation */
 img {
-  width: 300px;
-  height: 300px;
+  width: auto;
+  height: auto;
   animation: spin 2s infinite linear;
 }
 
