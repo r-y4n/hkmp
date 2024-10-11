@@ -12,10 +12,10 @@ body, html {
 
 /* Style the image and apply the spinning animation */
 img {
-  width: auto;
-  height: auto;
+  width: 70vw;
+  height: 70vw;
   animation-name: spin;
-  animation-duration: 2000ms;
+  animation-duration: 7000ms;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
 }
@@ -23,9 +23,9 @@ img {
 /* Define the keyframes for the spinning animation */
 @keyframes spin {
   from {
-      transform:rotate(30deg);
+      transform:rotate(0deg);
   }
   to {
-      transform:rotate(90deg);
+      transform:rotate(360deg);
   }
 }
