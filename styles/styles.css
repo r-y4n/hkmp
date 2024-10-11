@@ -11,7 +11,7 @@ body, html {
 }
 
 /* Style the image and apply the spinning animation */
-img {
+.imgstyle {
   width: 70vw;
   height: 70vw;
   animation-name: spin;

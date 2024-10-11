@@ -18,7 +18,7 @@ export default function Home() {
     // Create the image element
     const image = document.createElement('img');
     image.src = '/will.jpg'; // Path to your image in the /public folder
-
+    image.className = 'imgstyle';
     // Append the image to the container
     container.appendChild(image);
 
