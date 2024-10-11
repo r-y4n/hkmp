@@ -3,7 +3,6 @@ import { useEffect } from 'react';
 
 export default function Home() {
   useEffect(() => {
-    // Create a style tag for CSS
     const style = document.createElement('style');
     style.innerHTML = `
       .imgstyle {
@@ -17,14 +16,14 @@ export default function Home() {
 
       @keyframes spin {
         from {
-          transform: rotate(0deg);
+          transform: rotate(30deg);
         }
         to {
-          transform: rotate(360deg);
+          transform: rotate(90deg);
         }
       }
     `;
-    document.head.appendChild(style); // Append the style to the head
+    document.head.appendChild(style);
 
     // Create a container div for the image
     const container = document.createElement('div');
@@ -35,21 +34,19 @@ export default function Home() {
 
     // Create the image element
     const image = document.createElement('img');
-    image.src = '/will.jpg'; // Path to your image in the /public folder
-    image.className = 'imgstyle'; // Apply the CSS class
+    image.src = '/will.jpg'; 
+    image.className = 'imgstyle'; 
 
-    // Append the image to the container
     container.appendChild(image);
 
-    // Append the container to the body
     document.body.appendChild(container);
 
     return () => {
-      // Cleanup: Remove the image and container when component unmounts
+      
       document.body.removeChild(container);
-      document.head.removeChild(style); // Remove the style tag
+      document.head.removeChild(style); 
     };
   }, []);
 
-  return null; // This component doesn't render any JSX directly
+  return null; 
 }

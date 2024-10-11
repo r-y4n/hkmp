@@ -1,6 +1,6 @@
-/* styles.css */
 
-/* Ensure full height of body and HTML for centering */
+
+
 body, html {
   margin: 0;
   padding: 0;
@@ -10,7 +10,7 @@ body, html {
   align-items: center;
 }
 
-/* Style the image and apply the spinning animation */
+
 .imgstyle {
   width: 70vw;
   height: 70vw;
@@ -20,12 +20,12 @@ body, html {
   animation-timing-function: linear;
 }
 
-/* Define the keyframes for the spinning animation */
+
 @keyframes spin {
   from {
-      transform:rotate(0deg);
+      transform:rotate(30deg);
   }
   to {
-      transform:rotate(360deg);
+      transform:rotate(90deg);
   }
 }
