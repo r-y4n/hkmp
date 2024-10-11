@@ -17,6 +17,14 @@ export default function Home() {
         transform-origin: center; 
         z-index: 1000;
       }
+      .caption {
+      width: 70vw;
+      height: 20vw;
+      padding-top: 10px;
+      align-items: center;
+      z-index: 100;
+      background-color: #f27596;
+      }
 
       @keyframes spin {
         0% {
@@ -47,13 +55,17 @@ export default function Home() {
     container.style.alignItems = 'center';
     container.style.height = '100vh';
 
-    // Create the image element
+    const caption = document.createElement('div');
+    caption.className = 'caption'; 
+    caption.textContent = 'will 🤑'; 
+
+    
     const image = document.createElement('img');
     image.src = '/will.jpg'; 
     image.className = 'imgstyle'; 
 
     container.appendChild(image);
-
+    image.appendChild(caption);
     document.body.appendChild(container);
 
     return () => {
