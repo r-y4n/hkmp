@@ -9,45 +9,45 @@ export default function Home() {
         width: 70vw;
         height: 70vw;
         animation-name: spin;
-        animation-duration: 2000ms; /* Adjust duration as needed */
+        animation-duration: 2000ms; 
         animation-iteration-count: infinite;
         animation-timing-function: linear;
-        animation-direction: alternate; /* Makes the animation reverse */
-        display: block; /* Makes the image behave like a block element */
-        margin: auto; /* Centers the image in the container */
-        transform-origin: center; /* Ensures the rotation happens around the center */
+        animation-direction: alternate; 
+        display: block; 
+        margin: auto; 
+        transform-origin: center; 
       }
 
       @keyframes spin {
         0% {
-          transform: rotate(30deg); /* Starting at 30 degrees */
+          transform: rotate(30deg); 
         }
         50% {
-          transform: rotate(330deg); /* Go to 375 degrees, which is 15 degrees past 360 */
+          transform: rotate(330deg); 
         }
         100% {
-          transform: rotate(30deg); /* Back to starting point */
+          transform: rotate(30deg);
         }
       }
 
-      /* Style the container to center the image vertically and horizontally */
+      
       .container {
         display: flex;
-        justify-content: center; /* Centers horizontally */
-        align-items: center; /* Centers vertically */
-        height: 100vh; /* Full height of the viewport */
+        justify-content: center; 
+        align-items: center; 
+        height: 100vh; 
       }
     `;
     document.head.appendChild(style);
 
-    // Create a container div for the image
+   
     const container = document.createElement('div');
     container.style.display = 'flex';
     container.style.justifyContent = 'center';
     container.style.alignItems = 'center';
     container.style.height = '100vh';
 
-    // Create the image element
+ 
     const image = document.createElement('img');
     image.src = '/will.jpg'; 
     image.className = 'imgstyle'; 
