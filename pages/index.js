@@ -5,7 +5,7 @@ export default function Home() {
     // Dynamically load the CSS file
     const link = document.createElement('link');
     link.rel = 'stylesheet';
-    link.href = '/styles/styles.css'; // Path to your CSS file
+    link.href = '/styles.css'; // Path to your CSS file
     document.head.appendChild(link); // Add the link to the document's head
 
     // Create a container div for the image
