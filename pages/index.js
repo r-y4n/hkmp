@@ -17,7 +17,7 @@ export default function Home() {
 
     // Create the image element
     const image = document.createElement('img');
-    image.src = '/public/image.png'; // Path to your image in the /public folder
+    image.src = '/public/will.png'; // Path to your image in the /public folder
 
     // Append the image to the container
     container.appendChild(image);
