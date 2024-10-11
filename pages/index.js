@@ -1,12 +1,30 @@
+// pages/index.js
 import { useEffect } from 'react';
 
 export default function Home() {
   useEffect(() => {
-    // Dynamically load the CSS file
-    const link = document.createElement('link');
-    link.rel = 'stylesheet';
-    link.href = '/styles.css'; // Path to your CSS file
-    document.head.appendChild(link); // Add the link to the document's head
+    // Create a style tag for CSS
+    const style = document.createElement('style');
+    style.innerHTML = `
+      .imgstyle {
+        width: 70vw;
+        height: 70vw;
+        animation-name: spin;
+        animation-duration: 7000ms;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+      }
+
+      @keyframes spin {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(360deg);
+        }
+      }
+    `;
+    document.head.appendChild(style); // Append the style to the head
 
     // Create a container div for the image
     const container = document.createElement('div');
@@ -18,7 +36,8 @@ export default function Home() {
     // Create the image element
     const image = document.createElement('img');
     image.src = '/will.jpg'; // Path to your image in the /public folder
-    image.className = 'imgstyle';
+    image.className = 'imgstyle'; // Apply the CSS class
+
     // Append the image to the container
     container.appendChild(image);
 
@@ -28,6 +47,7 @@ export default function Home() {
     return () => {
       // Cleanup: Remove the image and container when component unmounts
       document.body.removeChild(container);
+      document.head.removeChild(style); // Remove the style tag
     };
   }, []);
 
