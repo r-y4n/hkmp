@@ -9,23 +9,20 @@ export default function Home() {
         width: 70vw;
         height: 70vw;
         animation-name: spin;
-        animation-duration: 1500ms;
+        animation-duration: 4000ms;
         animation-iteration-count: infinite;
         animation-timing-function: linear;
+        animation-direction: alternate;
       }
 
       @keyframes spin {
-        0% {
-          transform: rotate(30deg); /* Starting at 22.5 degrees */
+        from {
+          transform: rotate(30deg);
         }
-        50% {
-          transform: rotate(0deg); /* Ending at 67.5 degrees */
-        }
-        100% {
-          transform: rotate(330deg); /* Back to starting point */
+        to {
+          transform: rotate(330deg);
         }
       }
-      
     `;
     document.head.appendChild(style);
 
