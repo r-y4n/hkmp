@@ -4,15 +4,21 @@ export default function WillTracker() {
   useEffect(() => {
     const style = document.createElement('style');
     style.innerHTML = `
+      * {
+        margin: 0; /* Remove all default margins */
+        padding: 0; /* Remove all default padding */
+        box-sizing: border-box; /* Ensure padding doesn't affect the width of the navbar */
+      }
+
       .navbar {
         display: flex;
         justify-content: space-around; /* Evenly space the links */
         align-items: center;
         background-color: #333;
-        padding: 15px;
+        padding: 15px 0; /* Padding only on the top and bottom */
         position: fixed;
         top: 0;
-        width: 1000000px; /* Make the navbar span the full width of the screen */
+        width: 100vw; /* Full width of the viewport */
         z-index: 1001;
       }
 

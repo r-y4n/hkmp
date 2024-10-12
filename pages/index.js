@@ -4,18 +4,10 @@ export default function Home() {
   useEffect(() => {
     const style = document.createElement('style');
     style.innerHTML = `
-      .imgstyle {
-        width: 70vw;
-        height: 70vw;
-        animation-name: spin;
-        animation-duration: 2000ms; 
-        animation-iteration-count: infinite;
-        animation-timing-function: ease-in-out;
-        display: block; 
-        margin: auto; 
-        transform-origin: center; 
-        z-index: 1000;
-        border-radius: 15%;
+      * {
+        margin: 0; /* Remove all default margins */
+        padding: 0; /* Remove all default padding */
+        box-sizing: border-box; /* Ensure padding doesn't affect the width of the navbar */
       }
 
       .navbar {
@@ -23,10 +15,10 @@ export default function Home() {
         justify-content: space-around; /* Evenly space the links */
         align-items: center;
         background-color: #333;
-        padding: 15px;
+        padding: 15px 0; /* Padding only on the top and bottom */
         position: fixed;
         top: 0;
-        width: 1000vw; /* Full width of the screen */
+        width: 100vw; /* Full width of the viewport */
         z-index: 1001;
       }
 
@@ -47,6 +39,20 @@ export default function Home() {
         align-items: center;
         height: 100vh;
         margin-top: 60px; /* Space for the navbar */
+      }
+
+      .imgstyle {
+        width: 80vw;
+        height: 80vw;
+        animation-name: spin;
+        animation-duration: 2000ms; 
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in-out;
+        display: block; 
+        margin: auto; 
+        transform-origin: center; 
+        z-index: 1000;
+        border-radius: 15%;
       }
 
       @keyframes spin {
