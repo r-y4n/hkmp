@@ -9,10 +9,10 @@ export default function WillTracker() {
         justify-content: space-around; /* Evenly space the links */
         align-items: center;
         background-color: #333;
-        padding: 0px;
+        padding: 15px;
         position: fixed;
         top: 0;
-        width: 100vw; /* Make the navbar span the full width of the screen */
+        width: 1000000px; /* Make the navbar span the full width of the screen */
         z-index: 1001;
       }
 
