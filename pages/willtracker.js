@@ -5,20 +5,20 @@ export default function WillTracker() {
     const style = document.createElement('style');
     style.innerHTML = `
       * {
-        margin: 0; /* Remove all default margins */
-        padding: 0; /* Remove all default padding */
-        box-sizing: border-box; /* Ensure padding doesn't affect the width of the navbar */
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
       }
 
       .navbar {
         display: flex;
-        justify-content: space-around; /* Evenly space the links */
+        justify-content: space-around;
         align-items: center;
         background-color: #333;
-        padding: 15px 0; /* Padding only on the top and bottom */
+        padding: 15px 0;
         position: fixed;
         top: 0;
-        width: 100vw; /* Full width of the viewport */
+        width: 100vw;
         z-index: 1001;
       }
 
@@ -38,7 +38,7 @@ export default function WillTracker() {
         justify-content: center;
         align-items: center;
         height: 100vh;
-        margin-top: 60px; /* Space for the navbar */
+        margin-top: 60px;
         font-family: "Lucida Console", "Courier New", monospace;
         color: #333;
         font-size: 2rem;
@@ -46,16 +46,15 @@ export default function WillTracker() {
     `;
     document.head.appendChild(style);
 
-    // Create the navbar
     const navbar = document.createElement('div');
     navbar.className = 'navbar';
 
     const homeLink = document.createElement('a');
-    homeLink.href = '/index'; // Link to the Home page
+    homeLink.href = '/index';
     homeLink.textContent = 'Home';
 
     const trackerLink = document.createElement('a');
-    trackerLink.href = '/willtracker'; // Link to the Will Tracker page
+    trackerLink.href = '/willtracker';
     trackerLink.textContent = 'Will Tracker';
 
     navbar.appendChild(homeLink);
@@ -63,20 +62,26 @@ export default function WillTracker() {
 
     document.body.appendChild(navbar);
 
-    // Create a placeholder for the Will Tracker content
     const container = document.createElement('div');
     container.className = 'container';
-    container.textContent = 'null'; // Placeholder text
-
+    container.innerHTML = `
+      <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/will.haskamp/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"></blockquote>
+    `;
     document.body.appendChild(container);
 
+    // Programmatically add the Instagram embed script
+    const script = document.createElement('script');
+    script.src = '//www.instagram.com/embed.js';
+    script.async = true;
+    document.body.appendChild(script);
+
     return () => {
-      // Cleanup: Remove the navbar and container when component unmounts
       document.body.removeChild(navbar);
       document.body.removeChild(container);
-      document.head.removeChild(style); 
+      document.body.removeChild(script);
+      document.head.removeChild(style);
     };
   }, []);
 
-  return null; 
+  return null;
 }
