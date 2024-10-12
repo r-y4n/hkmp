@@ -63,14 +63,20 @@ export default function WillTracker() {
 
     const container = document.createElement('div');
     container.className = 'container';
-    container.innerHTML = `
-      <script src="https://static.elfsight.com/platform/platform.js" async></script>
-      <div class="elfsight-app-6ce22393-5461-4785-8ba6-b95a76c56a1b" data-elfsight-app-lazy></div>
-    `;
-
+    
     document.body.appendChild(container); // Append the container to the body
+
+    // Load the script dynamically
+    const script = document.createElement('script');
+    script.src = "https://static.elfsight.com/platform/platform.js";
+    script.async = true;
+    document.body.appendChild(script); // Append the script to the body
 
   }, []); // Ensure the useEffect runs only once on component mount
 
-  return null; // Return null since the component is dynamically creating elements
+  return (
+    <div className="container">
+      <div className="elfsight-app-6ce22393-5461-4785-8ba6-b95a76c56a1b" data-elfsight-app-lazy></div>
+    </div>
+  ); // Return the JSX for the container
 }
