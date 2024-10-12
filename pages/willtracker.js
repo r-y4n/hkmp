@@ -1,23 +1,9 @@
 import { useEffect } from 'react';
 
-export default function Home() {
+export default function WillTracker() {
   useEffect(() => {
     const style = document.createElement('style');
     style.innerHTML = `
-      .imgstyle {
-        width: 80vw;
-        height: 80vw;
-        animation-name: spin;
-        animation-duration: 2000ms; 
-        animation-iteration-count: infinite;
-        animation-timing-function: ease-in-out;
-        display: block; 
-        margin: auto; 
-        transform-origin: center; 
-        z-index: 1000;
-        border-radius: 15%;
-      }
-
       .navbar {
         display: flex;
         justify-content: space-between;
@@ -47,18 +33,9 @@ export default function Home() {
         align-items: center;
         height: 100vh;
         margin-top: 60px; /* Space for the navbar */
-      }
-
-      @keyframes spin {
-        0% {
-          transform: rotate(-22.5deg); 
-        }
-        50% {
-          transform: rotate(22.5deg); 
-        }
-        100% {
-          transform: rotate(-22.5deg);
-        }
+        font-family: "Lucida Console", "Courier New", monospace;
+        color: #333;
+        font-size: 2rem;
       }
     `;
     document.head.appendChild(style);
@@ -80,19 +57,15 @@ export default function Home() {
 
     document.body.appendChild(navbar);
 
-    // Create the container div for the image
+    // Create a placeholder for the Will Tracker content
     const container = document.createElement('div');
     container.className = 'container';
+    container.textContent = 'null'; // Placeholder text
 
-    const image = document.createElement('img');
-    image.src = '/will.jpg'; // Path to your image in the /public folder
-    image.className = 'imgstyle'; 
-
-    container.appendChild(image);
     document.body.appendChild(container);
 
     return () => {
-      // Cleanup: Remove the navbar and image container when component unmounts
+      // Cleanup: Remove the navbar and container when component unmounts
       document.body.removeChild(navbar);
       document.body.removeChild(container);
       document.head.removeChild(style); 
