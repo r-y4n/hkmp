@@ -6,13 +6,13 @@ export default function WillTracker() {
     style.innerHTML = `
       .navbar {
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around; /* Evenly space the links */
         align-items: center;
         background-color: #333;
         padding: 15px;
         position: fixed;
         top: 0;
-        width: 100%;
+        width: 100vw; /* Make the navbar span the full width of the screen */
         z-index: 1001;
       }
 

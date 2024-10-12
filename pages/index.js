@@ -5,8 +5,8 @@ export default function Home() {
     const style = document.createElement('style');
     style.innerHTML = `
       .imgstyle {
-        width: 80vw;
-        height: 80vw;
+        width: 70vw;
+        height: 70vw;
         animation-name: spin;
         animation-duration: 2000ms; 
         animation-iteration-count: infinite;
@@ -20,13 +20,13 @@ export default function Home() {
 
       .navbar {
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around; /* Evenly space the links */
         align-items: center;
         background-color: #333;
         padding: 15px;
         position: fixed;
         top: 0;
-        width: 100%;
+        width: 100vw; /* Full width of the screen */
         z-index: 1001;
       }
 
