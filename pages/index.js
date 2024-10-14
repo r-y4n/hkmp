@@ -5,20 +5,20 @@ export default function Home() {
     const style = document.createElement('style');
     style.innerHTML = `
       * {
-        margin: 0; /* Remove all default margins */
-        padding: 0; /* Remove all default padding */
-        box-sizing: border-box; /* Ensure padding doesn't affect the width of the navbar */
+        margin: 0; 
+        padding: 0; 
+        box-sizing: border-box; 
       }
 
       .navbar {
         display: flex;
-        justify-content: space-around; /* Evenly space the links */
+        justify-content: space-around; 
         align-items: center;
         background-color: #333;
-        padding: 15px 0; /* Padding only on the top and bottom */
+        padding: 15px 0; 
         position: fixed;
         top: 0;
-        width: 100vw; /* Full width of the viewport */
+        width: 100vw; 
         z-index: 1001;
       }
 
@@ -38,7 +38,7 @@ export default function Home() {
         justify-content: center;
         align-items: center;
         height: 100vh;
-        margin-top: 60px; /* Space for the navbar */
+        margin-top: 60px; 
       }
 
       .imgstyle {
@@ -69,16 +69,15 @@ export default function Home() {
     `;
     document.head.appendChild(style);
 
-    // Create the navbar
     const navbar = document.createElement('div');
     navbar.className = 'navbar';
 
     const homeLink = document.createElement('a');
-    homeLink.href = '/index'; // Link to the Home page
+    homeLink.href = '/index'; 
     homeLink.textContent = 'Home';
 
     const trackerLink = document.createElement('a');
-    trackerLink.href = '/willtracker'; // Link to the Will Tracker page
+    trackerLink.href = '/willtracker'; 
     trackerLink.textContent = 'Will Tracker';
 
     navbar.appendChild(homeLink);
@@ -86,19 +85,17 @@ export default function Home() {
 
     document.body.appendChild(navbar);
 
-    // Create the container div for the image
     const container = document.createElement('div');
     container.className = 'container';
 
     const image = document.createElement('img');
-    image.src = '/will.jpg'; // Path to your image in the /public folder
+    image.src = '/will.jpg'; 
     image.className = 'imgstyle'; 
 
     container.appendChild(image);
     document.body.appendChild(container);
 
     return () => {
-      // Cleanup: Remove the navbar and image container when component unmounts
       document.body.removeChild(navbar);
       document.body.removeChild(container);
       document.head.removeChild(style); 
